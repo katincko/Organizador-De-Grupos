@@ -31,7 +31,7 @@ Just paste your list of names, choose the number of groups, and enjoy a clean, s
 
 1. Enter one name per line in the textarea.
 2. Set the number of groups you want.
-3. Click **ENVIAR** to generate the groups.
+3. Click **SEND** to generate the groups.
 4. Click each group card to reveal its members.
 5. Use the green "+" button to add names or the red "✖" to remove them from any group.
 6. Download your name list anytime with the ⬇️ button.
