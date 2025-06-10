@@ -1,5 +1,50 @@
-// filepath: c:\Users\Joca\Desktop\React\Organizador de grupo\script.js
 document.addEventListener('DOMContentLoaded', () => {
+    // filepath: c:\Users\Joca\Desktop\React\Organizador de grupo\script.js
+    
+    const translations = {
+            pt: {
+                title: "Organizador De Grupos!",
+                placeholder: "Digite um nome por linha",
+                groupCount: "Quantidade de grupos",
+                enviar: "ENVIAR",
+                download: "Baixar lista de nomes",
+                lang: "Linguagem:",
+                group: "Grupo"
+            },
+            en: {
+                title: "Group Organizer!",
+                placeholder: "Enter one name per line",
+                groupCount: "Number of groups",
+                enviar: "SEND",
+                download: "Download names list",
+                lang: "Language:",
+                group: "Group"
+            }
+        };
+    
+    // Guarde o idioma atual
+    let currentLang = 'pt';
+    
+    function setLang(lang) {
+        currentLang = lang;
+        document.getElementById('main-title').textContent = translations[lang].title;
+        document.getElementById('namesInput').placeholder = translations[lang].placeholder;
+        document.getElementById('groupCount').placeholder = translations[lang].groupCount;
+        document.getElementById('generateGroups').textContent = translations[lang].enviar;
+        document.getElementById('downloadNames').title = translations[lang].download;
+        document.querySelector('.lang-label').textContent = translations[lang].lang;
+
+        // Só atualiza os cards se já houver grupos
+        if (typeof displayGroups === 'function' && window._lastGroups && window._lastGroups.length > 0) {
+            // Adiciona um item invisível temporário
+            const tempGroups = window._lastGroups.map(g => [...g, '__invisible__']);
+            displayGroups(tempGroups, true);
+            setTimeout(() => {
+                const cleanedGroups = tempGroups.map(g => g.filter(name => name !== '__invisible__'));
+                displayGroups(cleanedGroups, true);
+            }, 0);
+        }
+    }
     const nameInput = document.getElementById('namesInput');
     const groupCountInput = document.getElementById('groupCount');
     const generateButton = document.getElementById('generateGroups');
@@ -57,7 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return groups;
     }
 
+    // Dentro de displayGroups, sempre salve uma cópia profunda:
     function displayGroups(groups, fill = false) {
+        window._lastGroups = groups.map(g => g.slice());
         // Ajusta o tamanho do array de overlays para o número de grupos
         if (revealedOverlays.length !== groups.length) {
             revealedOverlays = Array(groups.length).fill(false);
@@ -70,7 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
             groupCard.style.position = 'relative';
 
             const title = document.createElement('h3');
-            title.textContent = `Grupo ${groupIdx + 1}`;
+            // Troque aqui para usar o idioma atual:
+            title.textContent = `${translations[currentLang].group} ${groupIdx + 1}`;
             groupCard.appendChild(title);
 
             const ul = document.createElement('ul');
@@ -133,4 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             groupContainer.appendChild(groupCard);
         });
     }
+
+    document.getElementById('btn-pt').onclick = () => setLang('pt');
+    document.getElementById('btn-en').onclick = () => setLang('en');
 });

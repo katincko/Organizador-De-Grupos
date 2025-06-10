@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Barra de idioma -->
+    <div class="lang-bar">
+        <span class="lang-label">Linguagem:</span>
+        <button class="lang-btn" id="btn-pt" title="Português">
+            <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/br.svg" alt="BR" />
+        </button>
+        <button class="lang-btn" id="btn-en" title="English">
+            <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/us.svg" alt="US" />
+        </button>
+    </div>
     <div class="container">
-        <h1>Organizador De Grupos!</h1>
+        <h1 id="main-title">Organizador De Grupos!</h1>
         <div class="input-section">
             <button id="downloadNames" class="download-btn" title="Baixar lista de nomes">⬇️</button>
             <textarea id="namesInput" placeholder="Digite um nome por linha"></textarea>

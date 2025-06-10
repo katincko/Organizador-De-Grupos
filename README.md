@@ -1,45 +1,55 @@
 # Group Organizer
 
-This project is a minimalistic web application that allows users to input a list of names and specify the number of groups to create. The application automatically generates groups and displays them in a visually appealing card format.
+A minimal and interactive web app to quickly organize people into random groups.  
+Just paste your list of names, choose the number of groups, and enjoy a clean, suspenseful reveal of each group!
 
-## Project Structure
+## ✨ Features
 
-```
-group-organizer
-├── src
-│   ├── index.html       # HTML structure of the website
-│   ├── style.css        # CSS styles for the website
-│   └── script.js        # JavaScript logic for group generation
-└── README.md            # Documentation for the project
-```
+- Simple and modern interface
+- Add names (one per line) and set the number of groups
+- Groups are generated randomly and shown as cards
+- Each group is hidden by an overlay for a suspenseful reveal (click to show)
+- Add or remove names from groups at any time
+- Download your list of names as a `.txt` file
 
-## Features
+## 🚀 Getting Started
 
-- Input field for entering names
-- Selection for the number of groups to create
-- Automatic generation of groups
-- Display of group names and members in cards
-
-## Getting Started
-
-1. Clone the repository:
-   ```
+1. **Clone the repository:**
+   ```sh
    git clone <repository-url>
    ```
 
-2. Navigate to the project directory:
-   ```
+2. **Navigate to the project folder:**
+   ```sh
    cd group-organizer
    ```
 
-3. Open the `src/index.html` file in a web browser to view the application.
+3. **Open the app:**
+   - Open `src/index.html` in your browser.
 
-## Usage
+## 🖥️ Usage
 
-- Enter names in the input field, separated by commas.
-- Select the number of groups you want to create.
-- Click the "Generate Groups" button to see the generated groups displayed as cards.
+1. Enter one name per line in the textarea.
+2. Set the number of groups you want.
+3. Click **ENVIAR** to generate the groups.
+4. Click each group card to reveal its members.
+5. Use the green "+" button to add names or the red "✖" to remove them from any group.
+6. Download your name list anytime with the ⬇️ button.
 
-## Contributing
+## 📁 Project Structure
 
-Feel free to submit issues or pull requests if you have suggestions for improvements or new features.
+```
+src/
+├── index.html   # Main HTML file
+├── style.css    # Styles
+└── script.js    # App logic
+```
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome!  
+Feel free to open an issue or fork the project.
+
+---
+
+**Made with simplicity and fun in mind.**
