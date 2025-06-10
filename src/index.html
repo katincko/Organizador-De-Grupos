@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Grupos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organizador De Grupos!</h1>
+        <div class="input-section">
+            <button id="downloadNames" class="download-btn" title="Baixar lista de nomes">⬇️</button>
+            <textarea id="namesInput" placeholder="Digite um nome por linha"></textarea>
+            <input type="number" id="groupCount" placeholder="Quantidade de grupos" min="1">
+            <button id="generateGroups">ENVIAR</button>
+        </div>
+        <div id="groupsContainer" class="groups-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* Reset e fonte base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título centralizado */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Container principal centralizado e com sombra */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Seção de inputs em coluna */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Textarea estilizado */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1em;
+}
+
+/* Input de número estilizado */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Botão principal */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Container dos grupos em linha */
+.groups-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card de grupo */
+.group-card {
+    background: #e7f3fe;
+    border: 2px solid #b3d7ff;
+    border-radius: 8px;
+    padding: 16px 12px;
+    min-width: 180px;
+    min-height: 220px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título do grupo */
+.group-card h3 {
+    margin: 0 0 10px 0;
+    color: #3a6ea5;
+    font-size: 1.2em;
+}
+
+/* Lista de nomes do grupo */
+.group-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Item da lista de nomes */
+.group-card li {
+    padding: 3px 0;
+    color: #333;
+    text-align: left;
+}
+
+/* Overlay de suspense do grupo */
+.card-overlay {
+    text-align: center;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+/* Botão de download no topo direito */
+.download-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Botão X para remover nome */
+.remove-name {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Botão verde de adicionar nome */
+.add-name-btn {
+    margin-top: 10px;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.add-name-btn:hover {
+    background: #219150;
+}
